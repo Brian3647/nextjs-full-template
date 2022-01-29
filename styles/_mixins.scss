@@ -1,0 +1,13 @@
+@mixin base-text {
+	font-family: $font-base;
+}
+
+@mixin text-size($size) {
+	@include base-text;
+	font-size: $size;
+}
+
+@mixin text($size, $color) {
+	@include text-size($size);
+	color: $color;
+}

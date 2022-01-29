@@ -1,5 +1,5 @@
-import cfg from '#lib/cfg';
-import MetaTags from '#lib/components/MetaTags';
+import cfg from '@lib/cfg';
+import MetaTags from '@lib/components/MetaTags';
 import Head from 'next/head';
 
 export interface Props {
@@ -9,11 +9,11 @@ export interface Props {
 }
 
 export default function Layout(props: Props) {
-	const {
-		title = cfg.title + ' - ' + cfg.subtitle,
-		description = cfg.description,
-		children = <></>
-	} = props;
+	const { title = cfg.title + ' - ' + cfg.subtitle, children = <></> } = props;
+
+	if (props.description === undefined) {
+		props.description = cfg.description;
+	}
 
 	return (
 		<>

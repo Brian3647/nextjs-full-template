@@ -1,4 +1,4 @@
-import cfg from '#lib/cfg';
+import cfg from '@lib/cfg';
 
 export interface Props {
 	title?: string;

@@ -1,0 +1,26 @@
+{
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:eslint-plugin-unicorn/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["@typescript-eslint", "unicorn"],
+	"rules": {
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"unicorn/prevent-abbreviations": "off",
+		"unicorn/consistent-destructuring": "off",
+		"unicorn/prefer-module": "off"
+	},
+	"ignorePatterns": ["public/build", "node_modules"]
+}

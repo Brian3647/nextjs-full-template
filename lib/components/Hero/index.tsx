@@ -1,4 +1,4 @@
-import cfg from '#lib/cfg';
+import cfg from '@lib/cfg';
 import ScrollButton from '../ScrollButton';
 import styles from './index.module.scss';
 

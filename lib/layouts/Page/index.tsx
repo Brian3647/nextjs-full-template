@@ -12,7 +12,7 @@ export default function Layout(props: Props) {
 	const { title = cfg.title + ' - ' + cfg.subtitle, children = <></> } = props;
 
 	if (props.description === undefined) {
-		props.description = cfg.description;
+		props = { ...props, description: cfg.description };
 	}
 
 	return (

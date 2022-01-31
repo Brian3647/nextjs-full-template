@@ -1,6 +1,7 @@
 import cfg from '@lib/cfg';
 import ScrollButton from '../ScrollButton';
 import styles from './index.module.scss';
+import type { FC } from 'react';
 
 interface Props {
 	scrollTarget?: string;
@@ -9,7 +10,7 @@ interface Props {
 	description?: string;
 }
 
-export default function Hero(props: Props) {
+const Hero: FC<Props> = (props) => {
 	const {
 		title = cfg.title,
 		subtitle = '"' + cfg.subtitle + '"',
@@ -25,4 +26,6 @@ export default function Hero(props: Props) {
 			{scrollTarget && <ScrollButton target={scrollTarget} />}
 		</div>
 	);
-}
+};
+
+export default Hero;

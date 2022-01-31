@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const Layout: FC<Props> = (props) => {
-	const { title = `${cfg.title}-${cfg.subtitle}`, children } = props;
+	const { title = `${cfg.title} - ${cfg.subtitle}`, children } = props;
 
 	if (props.description === undefined) {
 		props = { ...props, description: cfg.description };

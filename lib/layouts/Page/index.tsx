@@ -19,7 +19,7 @@ export default function Layout(props: Props) {
 		<>
 			<Head>
 				<title>{title}</title>
-				<MetaTags {...props} />
+				<MetaTags {...props} image={cfg.banner} />
 			</Head>
 
 			{children}
